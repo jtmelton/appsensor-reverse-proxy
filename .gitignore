@@ -22,3 +22,7 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# appsensor specific exclusions
+appsensor-reverse-proxy
+*.pem
