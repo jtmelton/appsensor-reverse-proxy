@@ -29,6 +29,6 @@ func LogExecutionTime(next http.Handler) http.Handler {
 		w.Write(rec.Body.Bytes())
 
 		glog.Infof("%v %s on %s %s in %v", rec.Code, http.StatusText(rec.Code), r.Method, r.URL.Path, time.Since(start))
-		
+
 	})
 }
