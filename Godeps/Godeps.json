@@ -11,6 +11,14 @@
 			"Rev": "6e7864c54dafb548423c64fc255e162c1125da04"
 		},
 		{
+			"ImportPath": "github.com/garyburd/redigo/internal",
+			"Rev": "6ece6e0a09f28cc399b21550cbf37ab39ba63cce"
+		},
+		{
+			"ImportPath": "github.com/garyburd/redigo/redis",
+			"Rev": "6ece6e0a09f28cc399b21550cbf37ab39ba63cce"
+		},
+		{
 			"ImportPath": "github.com/golang/glog",
 			"Rev": "fca8c8854093a154ff1eb580aae10276ad6b1b5f"
 		},
