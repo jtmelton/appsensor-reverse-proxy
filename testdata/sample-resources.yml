@@ -1,0 +1,9 @@
+## list of all expected uris in the application
+## wildcards are acceptable anywhere in the path, but are simple (* only)
+
+resources:
+    - /path/to/a
+    - /path/to/b
+    - /path/to/c
+    - /api/v1.0/blocks
+    - REGEX|/users/\S+/data

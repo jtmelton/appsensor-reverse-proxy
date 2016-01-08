@@ -1,0 +1,30 @@
+# if set to true, implicitly adds the "OPTIONS" verb (method) to all listed 
+# resources. For example, if you have a resource with [GET, POST] as the possible
+# verbs, this will now implicitly become [GET, POST, OPTIONS]
+enableGlobalPreflightRequests: true
+
+# if set to true, unlisted resources (those not named in this file explicitly) will 
+# always report an event, no matter what verb is used. If you enable this setting, 
+# ensure all expected resources in your application 
+evaluateUnlistedResources: true
+
+# resource verb mappings
+resources:
+    /path/to/a:
+        - GET
+        - POST
+    /path/to/b:
+        - GET
+        - TRACE
+    /path/to/c:
+        - POST
+        - TRACE    
+    /api/v1.0/blocks:
+        - GET
+        - POST
+        - TRACE    
+    REGEX|/users/\S+/data:
+        - GET
+        - POST
+        - TRACE
+        - OPTIONS
