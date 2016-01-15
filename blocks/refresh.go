@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/parnurzeal/gorequest"
+	"github.com/golang/glog"
+	"github.com/parnurzeal/gorequest"
 )
 
 func RefreshBlocks(blockRefreshUrl *string) {

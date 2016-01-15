@@ -3,7 +3,7 @@ package middleware
 import (
 	"net/http"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
+	"github.com/golang/glog"
 )
 
 func Recovery(next http.Handler) http.Handler {

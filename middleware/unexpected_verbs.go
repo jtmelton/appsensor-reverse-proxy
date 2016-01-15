@@ -9,7 +9,7 @@ import (
 	"gopkg.in/yaml.v2"
 
 	"github.com/Workiva/go-datastructures/set"
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
+	"github.com/golang/glog"
 	"github.com/jtmelton/appsensor-reverse-proxy/ids"
 )
 

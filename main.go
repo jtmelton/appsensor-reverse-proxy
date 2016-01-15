@@ -14,9 +14,9 @@ import (
 	"github.com/jtmelton/appsensor-reverse-proxy/ids"
 	"github.com/jtmelton/appsensor-reverse-proxy/middleware"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/gorilla/context"
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/justinas/alice"
+	"github.com/golang/glog"
+	"github.com/gorilla/context"
+	"github.com/justinas/alice"
 )
 
 type Prox struct {
@@ -192,6 +192,8 @@ func main() {
 		// go by running a command similar to :
 		// "go run /usr/local/go/src/crypto/tls/generate_cert.go --host localhost"
 		// and change the location to wherever go is installed on your system
+
+		// Maybe show how to do this with openssl instead of with generate_cert.go for the people who want to do that.
 		err := http.ListenAndServeTLS(*port, *certFile, *keyFile, chainHandler)
 		if err != nil {
 			log.Fatal(err)

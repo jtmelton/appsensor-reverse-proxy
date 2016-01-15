@@ -4,8 +4,8 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/garyburd/redigo/redis"
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
+	"github.com/garyburd/redigo/redis"
+	"github.com/golang/glog"
 )
 
 var (
