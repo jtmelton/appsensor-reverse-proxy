@@ -3,7 +3,7 @@ package blocks
 import (
 	"time"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/Workiva/go-datastructures/set"
+	"github.com/Workiva/go-datastructures/set"
 )
 
 type Block struct {

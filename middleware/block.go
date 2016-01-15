@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
+	"github.com/golang/glog"
 	"github.com/jtmelton/appsensor-reverse-proxy/blocks"
 	"github.com/jtmelton/appsensor-reverse-proxy/connections"
 )
