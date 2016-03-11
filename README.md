@@ -1,6 +1,11 @@
 # appsensor-reverse-proxy
 Reverse proxy to front-end appsensor (https://github.com/jtmelton/appsensor) and implement various detection points (found at https://www.owasp.org/index.php/AppSensor_DetectionPoints)
 
+### Compiling for Docker
+```
+CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o $GOPATH/appsensor-reverse-proxy
+```
+
 ## Usage
 This application gets built as a standalone binary (named appsensor-reverse-proxy). 
 
@@ -9,6 +14,18 @@ When running the reverse proxy, there are a number of parameters you can use to 
 Here's an example execution with several of the features enabled: 
 
 `appsensor-reverse-proxy -logtostderr=true -enable-blocking=true -enable-tls=true -enable-trend-tracking -blocking-blocks-refresh-url=http://localhost:8090/api/v1.0/blocks -enable-invalid-verb-checking=true -enable-unexpected-verb-checking=true -resource-verbs-mapping-file=testdata/sample-resource-verbs-mapping.yml -enable-unexpected-resource-checking=true -resources-file=testdata/sample-resources.yml`
+
+Below is an example of running in docker, you can load in your own configuarion files with `-e resource-verbs-mapping-file=/your/verbmappings.yml` this example defaults to the samples in the testdata folder. 
+
+To run in a container you'll need to build the proxy with this command
+```
+CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o $GOPATH/appsensor-reverse-proxy
+```
+
+Once it is built run the image like this
+```
+docker run -d -p 80:8080 appsensor/reverse-proxy -logtostderr=true -enable-blocking=true -enable-tls=false -enable-trend-tracking -blocking-blocks-refresh-url=http://localhost:8090/api/v1.0/blocks -enable-invalid-verb-checking=true -enable-unexpected-verb-checking=true -enable-unexpected-resource-checking=true
+```
 
 Below is an explanation of each of the flags you can send. 
 
